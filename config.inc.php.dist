@@ -12,11 +12,15 @@
 // In the 'username' and 'url' field:
 //   %u is replaced with the username (from session info)
 //   %l is replaced with the local part of the username (if the username is an email address)
-//   %p is replaced with the domain part of the username (if the usrename is an email address or default mail domain if not)
+//   %d is replaced with the domain part of the username (if the usrename is an email address or default mail domain if not)
 //
 // In the 'password' field:
 //   %p is replaced with the password (from session info)
 //
+
+// Note that if you have set your roundcube configuration to automatically add the domain to the user
+// then %l & %u will include the domain part.
+
 $rcmail_config['carddav_default_servers'] = array(
   //array('url'       => 'https://davical.example.net/%u/addresses/',
   //      'username'  => '%u',
